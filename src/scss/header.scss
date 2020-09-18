@@ -1,6 +1,25 @@
-.page-header__top {
-  background-color: #00aa4b;
-  height: 48px;
+.page-header {
+  width: 100vw;
+  position: relative;
+  &__top {
+    position: fixed;
+    width: 100%;
+    background-color: #00aa4b;
+    height: 48px;
+    z-index: 999;
+  }
+  &__middle {
+    position: fixed;
+    top:48px;
+    width: 100%;
+    z-index: 999;
+  }
+  &__bottom {
+    position: fixed;
+    width: 100%;
+    top: 112px;
+    z-index: 998;
+  }
 }
 
 .page-menu {

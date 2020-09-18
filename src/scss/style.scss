@@ -1,6 +1,7 @@
 @import "../../node_modules/normalize.css/normalize.css";
 @import "./fonts.scss";
 @import "./links.scss";
+@import "../../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
 
 *, *::before, *::after {
   margin: 0;
@@ -20,7 +21,8 @@ html {
 
 body {
   background-color: #f3f2f2;
-  color: #121212
+  color: #121212;
+  min-height: 200vh;
 }
 
 .container {

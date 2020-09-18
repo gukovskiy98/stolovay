@@ -17,6 +17,7 @@
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
+    "@glidejs/glide": "^3.4.1",
     "browser-sync": "^2.26.12",
     "browserify": "^16.5.2",
     "del": "^5.1.0",
@@ -39,6 +40,7 @@
     "imagemin-pngquant": "^9.0.0",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
+    "slideout": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "webp-converter": "2.2.3"
   }
