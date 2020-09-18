@@ -1,8 +1,14 @@
-@mixin addFont($font-family, $font-weight, $src) {
+@mixin addFont($font-family, $font-weight, $font-style, $src) {
   @font-face {
     font-family: $font-family;
     font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: fallback;
     src: url($src + ".woff2") format("woff2"),
       url($src + ".woff") format("woff");
   }
 }
+
+@include addFont("Myriad", 400, normal, '../fonts/MyriadPro-Regular');
+@include addFont("Myriad", 300, normal, '../fonts/MyriadPro-Light');
+@include addFont("Myriad SemiExtended", 300, normal, '../fonts/MyriadPro-LightSemiExt');
