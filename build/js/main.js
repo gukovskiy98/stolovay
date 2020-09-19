@@ -4093,7 +4093,14 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
     var makeHeaderHide = require("./modules/hidingheader");
 
     testWebP();
-    makeHeaderHide();
+    makeHeaderHide(); // const selectWrapper = document.querySelector(".select-wrapper");
+    // const select = selectWrapper.querySelector("#search-category");
+    // selectWrapper.addEventListener("click", function() {
+    //   select.dispatchEvent(new MouseEvent("click", {
+    //     bubbles: true,
+    //     cancelable: true,
+    //   }));
+    // });
   }, {
     "./modules/hidingheader": 6,
     "./modules/webptest": 7,
@@ -4107,15 +4114,12 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
       var height = +getComputedStyle(headerBottom).height.slice(0, -2);
       var spaceToLeave = 45;
 
-      document.onscroll = function () {
-        if (!window.pageYOffset) {
-          headerBottom.style.top = "";
-          return;
-        }
-
+      function scrollHandler() {
         var delta = window.pageYOffset > height - spaceToLeave ? height - spaceToLeave : window.pageYOffset;
         headerBottom.style.top = fromTop - delta + "px";
-      };
+      }
+
+      document.addEventListener("scroll", scrollHandler);
     }
 
     module.exports = makeHeaderHide;
