@@ -4083,14 +4083,14 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
   }],
   5: [function (require, module, exports) {
     // из npm
-    var Slideout = require("slideout");
-
-    var Glide = require("@glidejs/glide"); // мои модули
+    var Slideout = require("slideout"); // мои модули
 
 
     var testWebP = require("./modules/webptest");
 
     var makeHeaderHide = require("./modules/hidingheader");
+
+    var carousels = require("./modules/carousels");
 
     testWebP();
     makeHeaderHide(); // const selectWrapper = document.querySelector(".select-wrapper");
@@ -4102,17 +4102,38 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
     //   }));
     // });
   }, {
-    "./modules/hidingheader": 6,
-    "./modules/webptest": 7,
-    "@glidejs/glide": 1,
+    "./modules/carousels": 6,
+    "./modules/hidingheader": 7,
+    "./modules/webptest": 8,
     "slideout": 4
   }],
   6: [function (require, module, exports) {
+    var Glide = require("@glidejs/glide");
+
+    new Glide(".categories", {
+      type: "slider",
+      bound: true,
+      perView: 11,
+      rewind: false,
+      animationDuration: 200,
+      breakpoints: {
+        1500: {
+          perView: 9
+        },
+        1200: {
+          perView: 7
+        }
+      }
+    }).mount();
+  }, {
+    "@glidejs/glide": 1
+  }],
+  7: [function (require, module, exports) {
     function makeHeaderHide() {
       var headerBottom = document.querySelector(".page-header__bottom");
       var fromTop = +getComputedStyle(headerBottom).top.slice(0, -2);
       var height = +getComputedStyle(headerBottom).height.slice(0, -2);
-      var spaceToLeave = 45;
+      var spaceToLeave = 32;
 
       function scrollHandler() {
         var delta = window.pageYOffset > height - spaceToLeave ? height - spaceToLeave : window.pageYOffset;
@@ -4124,7 +4145,7 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
 
     module.exports = makeHeaderHide;
   }, {}],
-  7: [function (require, module, exports) {
+  8: [function (require, module, exports) {
     // добавляем .webp к html, если webp поддерживается
     // и .no-webp, если наоборот
     function testWebP() {
