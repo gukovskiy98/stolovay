@@ -1,19 +1,14 @@
 // из npm
 const Slideout = require("slideout");
+const ClipboardJS = require("clipboard");
+new ClipboardJS(".page-menu__mail-copybox");
 
 // мои модули
 const testWebP = require("./modules/webptest");
 const makeHeaderHide = require("./modules/hidingheader");
-const carousels = require("./modules/carousels")
+const carousels = require("./modules/carousels");
+// const copymail = require("./modules/copymail");
 
 testWebP();
 makeHeaderHide()
-
-// const selectWrapper = document.querySelector(".select-wrapper");
-// const select = selectWrapper.querySelector("#search-category");
-// selectWrapper.addEventListener("click", function() {
-//   select.dispatchEvent(new MouseEvent("click", {
-//     bubbles: true,
-//     cancelable: true,
-//   }));
-// });
+carousels();
