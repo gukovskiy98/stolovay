@@ -490,22 +490,10 @@
     justify-content: center;
     align-items: center;
     margin-right: 15px;
-    &--opened {
-      .page-header-mobile__burger-line {
-        transform: rotate(45deg);
-        &::before {
-          transform: translateY(6px) rotate(90deg)
-        }
-        &::after {
-          transform: translateY(-6px) rotate(90deg);
-        }
-      }
-    }
   }
   &__burger-line {
     position: relative;
     &, &::before, &::after {
-      transition: all 0.2s ease;
       width: 18px;
       height: 1px;
       background-color: #fff;

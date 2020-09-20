@@ -1,4 +1,5 @@
 const Slideout = require("slideout");
+const makeHeaderHide = require('./hidingheader');
 
 const desktopHeader = `<header class="page-header">
   <div class="page-header__top">
@@ -242,25 +243,50 @@ const mobileHeader = `<header class="page-header-mobile">
     </div>
     <div class="page-header-mobile__logo">
       <img class="page-header-mobile__logo-image" src="./img/logo-mobile.png" alt="logo" />
-      <span class="page-header-mobile__logo-text">Столовая.РУ</span>
+      <div class="page-header-mobile__logo-text">
+        <span class="page-header-mobile__logo-text1">Столовая.РУ</span>
+        <span class="page-header-mobile__logo-text2">Создание пищеблоков</span>
+      </div>
     </div>
-    <div class="page-header-mobile__search"></div>
-    <div class="page-header-mobile__phone"></div>
-    <div class="page-header-mobile__cart"></div>
+    <div class="page-header-mobile__search">
+      <img src="./img/search-mobile.svg" alt="поиск" class="page-header-mobile__search-img">
+      <form action="#" method="get" name="search-form" id="search-form-mobile">
+        <input type="search" name="search" id="search-value-mobile" />
+      </form>
+    </div>
+    <div class="page-header-mobile__phone">
+      <a class="link" href="tel:+74957907205">
+        <img class="page-header-mobile__phone-img" src="./img/phone-mobile.png" alt="Телефон">
+      </a>
+    </div>
+    <div class="page-header-mobile__cart">
+      <a class="link" href="#">
+        <img class="page-header-mobile__cart-img" src="./img/cart-mobile.png" alt="Корзина">
+        <span class="page-header-mobile__cart-amount">12</span>
+      </a>
+    </div>
     </div>
   </div>
 </header>`;
 
 function loadheader() {
   if (window.innerWidth <= 900) {
-    document.body.insertAdjacentHTML("afterbegin", mobileHeader);
+    document.querySelector('#main-wrapper').insertAdjacentHTML("afterbegin", mobileHeader);
     const burger = document.querySelector(".page-header-mobile__burger");
-
-    burger.onclick = () => {
-      burger.classList.toggle("page-header-mobile__burger--opened");
-    };
+  
+    let slideout = new Slideout({
+      panel: document.getElementById("main-wrapper"),
+      menu: document.getElementById("menu"),
+      padding: 256,
+      tolerance: 70,
+    });
+    burger.addEventListener("click",  () => slideout.toggle());
+    // burger.addEventListener = () => {
+    //   burger.classList.toggle("page-header-mobile__burger--opened");
+    // };
   } else {
-    document.body.insertAdjacentHTML("afterbegin", desktopHeader);
+    document.querySelector("#main-wrapper").insertAdjacentHTML("afterbegin", desktopHeader);
+    makeHeaderHide();
   }
 }
 
