@@ -53,5 +53,12 @@ body {
   }
 }
 
+.container-mobile {
+  height: 100%;
+  width: calc(80vw + 45px);
+  margin: auto;
+  max-width: 95vw;
+}
+
 @import "./header.scss";
 

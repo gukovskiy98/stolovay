@@ -1,5 +1,5 @@
+// const burger = require("./modules/loadheader")();
 // из npm
-const Slideout = require("slideout");
 const ClipboardJS = require("clipboard");
 new ClipboardJS(".page-menu__mail-copybox");
 

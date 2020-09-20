@@ -43,6 +43,8 @@
     display: flex;
     padding: 0 10px 0 5px;
     height: 100%;
+    align-content: center;
+    align-items: center;
     &:last-of-type {
       padding-right: 0;
     }
@@ -56,7 +58,7 @@
   a {
     position: relative;
     color: #fff;
-    margin: auto;
+    // margin: auto;
   }
   &__mail {
     flex: 0 0 auto;
@@ -116,6 +118,7 @@
     height: 28px;
     display: flex;
     height: 100%;
+    position: relative;
     a {
       position: relative;
       padding-left: 20px;
@@ -129,6 +132,134 @@
       margin-left: 20px;
       a span {
         display: none;
+      }
+    }
+    &:hover {
+      .phone__wrapper {
+        display: flex;
+        align-content: center;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+    }
+  }
+  .phone {
+    &__wrapper {
+      width: 754px;
+      height: 364px;
+      background-color: #fff;
+      position: absolute;
+      top: 48px;
+      right: 0;
+      display: none;
+      padding: 62px 51px;
+      box-shadow: 4px 6px 18px rgba(0, 0, 0, 0.11);
+    }
+    &__left-side {
+      font-family: "Myriad SemiExtended", sans-serif;
+      line-height: 1.25rem;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: flex-start;
+      max-width: 275px;
+      margin-right: 100px;
+    }
+    &__right-side {
+      font-family: "Myriad SemiExtended", sans-serif;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: flex-start;
+      max-width: 275px;
+    }
+    &__form {
+      width: 100%;
+    }
+    &__title {
+      font-family: "Myriad Pro", sans-serif;
+      font-size: 1.5rem;
+    }
+    &__label {
+      font-weight: 300;
+      margin-bottom: 5px;
+      font-family: "Myriad Pro", sans-serif;
+    }
+    &__input {
+      height: 30px;
+      font-family: "Myriad Pro", sans-serif;
+      border: none;
+      border-bottom: 2px solid #c6c6c6;
+      margin-bottom: 20px;
+      width: 100%;
+      transition: border ease 0.2s;
+      padding-left: 10px;
+      &:hover {
+        border-bottom: 2px solid #ff9d0c;
+      }
+    }
+    &__submit {
+      font-size: 1.125rem;
+      line-height: 1;
+      font-weight: 400;
+      font-family: "Myriad Pro", sans-serif;
+      border: none;
+      border-radius: 23px;
+      background-color: #ffaf2d;
+      color: #fff;
+      padding: 14px 15px;
+      cursor: pointer;
+      &:hover {
+        background-color: #b4863b;
+      }
+      &:active {
+        background-color: #6e5a3a;
+      }
+    }
+    &__num {
+      font-family: "Myriad Pro", sans-serif;
+      color: #00aa4b;
+      font-size: 1.5rem;
+    }
+    &__text1 {
+      font-weight: 300;
+      color: #777;
+      margin-bottom: 20px;
+    }
+    &__text2 {
+      font-weight: 300;
+    }
+    &__list {
+      list-style-type: none;
+    }
+    &__list-elem {
+      margin-bottom: 10px;
+    }
+    &__list-text {
+      display: inline-block;
+    }
+    &__list-link {
+      color: #000;
+      padding-left: 32px;
+      &--phone {
+        background: url(../img/phone2.png) no-repeat center left;
+        span {
+          border-bottom: 1px dashed;
+          &:hover {
+            border-bottom: none;
+          }
+        }
+      }
+      &--viber {
+        background: url(../img/viber.png) no-repeat center left;
+      }
+      &--telegram {
+        background: url(../img/telegram.png) no-repeat center left;
+      }
+      &--whatsapp {
+        background: url(../img/whatsapp.png) no-repeat center left;
       }
     }
   }
@@ -333,6 +464,120 @@
     }
     @media screen and (max-width: 1800px) {
       font-size: 0.85rem;
+    }
+  }
+}
+
+.page-header-mobile {
+  background-color: #f1f1f1;
+  width: 100vw;
+  height: 53px;
+  &__wrapper {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+  }
+  &__burger {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #fda11c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    &--opened {
+      .page-header-mobile__burger-line {
+        transform: rotate(45deg);
+        &::before {
+          transform: translateY(6px) rotate(90deg)
+        }
+        &::after {
+          transform: translateY(-6px) rotate(90deg);
+        }
+      }
+    }
+  }
+  &__burger-line {
+    position: relative;
+    &, &::before, &::after {
+      transition: all 0.2s ease;
+      width: 18px;
+      height: 1px;
+      background-color: #fff;
+    }
+    &::before, &::after {
+      content: '';
+      display: block;
+      position: absolute;
+    }
+    &::before {
+      top: -6px;
+    }
+    &::after {
+      top: 6px;
+    }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    flex: 1 0 auto;
+    &-image {
+      width: 30px;
+      height: 30px;
+      margin-right: 4px;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-text1 {
+      color: #353535;
+      font-size: 1.1rem;
+    }
+    &-text2 {
+      color: #777;
+      font-family: "Myriad SemiExtended", sans-serif;
+      font-size: 0.6rem;
+    }
+  }
+  &__search {
+    height: 35px;
+    margin-right: 20px;
+    cursor: pointer;
+    &-img {
+      height: 100%;
+      width: auto;
+    }
+    #search-form-mobile {
+      display: none;
+    }
+  }
+  &__phone {
+    height: 35px;
+    margin-right: 20px;
+    &-img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  &__cart {
+    height: 35px;
+    position: relative;
+    &-img {
+      height: 100%;
+      width: auto;
+    }
+    &-amount {
+      position: absolute;
+      color: #fda11c;
+      left: 15px;
+      top: -7px;
     }
   }
 }
