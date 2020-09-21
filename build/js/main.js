@@ -5303,8 +5303,7 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
       if (window.innerWidth <= 900) {
         document.querySelector('.main-wrapper').insertAdjacentHTML("afterbegin", mobileHeader);
         var burger = document.querySelector(".page-header-mobile__burger");
-        var search = document.querySelector(".page-header-mobile__search"); // const searchForm = search.querySelector("#search-form-mobile");
-
+        var search = document.querySelector(".page-header-mobile__search");
         var slideout = new Slideout({
           panel: document.querySelector(".main-wrapper"),
           menu: document.querySelector(".menu-mobile"),

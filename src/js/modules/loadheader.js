@@ -276,7 +276,6 @@ function loadheader() {
     document.querySelector('.main-wrapper').insertAdjacentHTML("afterbegin", mobileHeader);
     const burger = document.querySelector(".page-header-mobile__burger");
     const search = document.querySelector(".page-header-mobile__search");
-    // const searchForm = search.querySelector("#search-form-mobile");
     let slideout = new Slideout({
       panel: document.querySelector(".main-wrapper"),
       menu: document.querySelector(".menu-mobile"),
