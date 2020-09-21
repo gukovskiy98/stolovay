@@ -102,10 +102,10 @@ const desktopHeader = `<header class="page-header">
   </div>
   <div class="page-header__middle">
     <div class="container container--header-middle">
-      <div class="logo">
+      <a class="logo" href="#">
         <img class="logo__image" src="./img/logo.png" alt="logo" />
         <span class="logo__text">Столовая.РУ</span>
-      </div>
+      </a>
       <form action="#" method="get" name="search-form" id="search-form">
         <div class="select-wrapper">
           <select name="category" id="search-category">
@@ -124,7 +124,7 @@ const desktopHeader = `<header class="page-header">
             <option value="Электромеханическое">Электромеханическое</option>
           </select>
         </div>
-        <input type="search" name="search" id="search-value" />
+        <input type="search" name="search" id="search-value" placeholder="Поиск" />
         <button type="submit" id="search-btn"></button>
       </form>
       <div class="portal">
@@ -242,17 +242,23 @@ const mobileHeader = `
       <div class="page-header-mobile__burger">
         <div class="page-header-mobile__burger-line"></div>
     </div>
-    <div class="page-header-mobile__logo">
+    <a class="page-header-mobile__logo" href="#">
       <img class="page-header-mobile__logo-image" src="./img/logo-mobile.png" alt="logo" />
       <div class="page-header-mobile__logo-text">
         <span class="page-header-mobile__logo-text1">Столовая.РУ</span>
         <span class="page-header-mobile__logo-text2">Создание пищеблоков</span>
       </div>
-    </div>
+    </a>
     <div class="page-header-mobile__search">
-      <img src="./img/search-mobile.svg" alt="поиск" class="page-header-mobile__search-img">
       <form action="#" method="get" name="search-form" id="search-form-mobile">
-        <input type="search" name="search" id="search-value-mobile" />
+        <label class="page-header-mobile__search-label" for="search-input-mobile">
+          <img src="./img/search-mobile.svg" alt="поиск" class="page-header-mobile__search-img">
+        </label>
+        <div class="page-header-mobile__search-wrapper">
+          <input type="hidden" name="category" value="Все" />
+          <input type="search" name="search" id="search-input-mobile" placeholder="Поиск" />
+          <button type="submit" class="link">Найти</button>
+        </div>
       </form>
     </div>
     <div class="page-header-mobile__phone">
@@ -275,7 +281,13 @@ function loadheader() {
   if (window.innerWidth <= 900) {
     document.querySelector('.main-wrapper').insertAdjacentHTML("afterbegin", mobileHeader);
     const burger = document.querySelector(".page-header-mobile__burger");
-    const search = document.querySelector(".page-header-mobile__search");
+    const searchForm = document.querySelector("#search-form-mobile");
+    const searchLabel = searchForm.querySelector(
+      ".page-header-mobile__search-label"
+    );
+    const searchWrapper = document.querySelector(
+      ".page-header-mobile__search-wrapper"
+    );
     let slideout = new Slideout({
       panel: document.querySelector(".main-wrapper"),
       menu: document.querySelector(".menu-mobile"),
@@ -283,8 +295,8 @@ function loadheader() {
       tolerance: 70,
     });
     burger.addEventListener("click",  () => slideout.toggle());
-    search.addEventListener("click", () =>
-      search.classList.toggle("page-header-mobile__search--opened")
+    searchLabel.addEventListener("click", () =>
+      searchWrapper.classList.toggle("search-opened")
     );
   } else {
     document.querySelector(".main-wrapper").insertAdjacentHTML("afterbegin", desktopHeader);

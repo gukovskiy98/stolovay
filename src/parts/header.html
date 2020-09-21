@@ -12,9 +12,14 @@
       </div>
     </div>
     <div class="page-header-mobile__search">
-      <img src="./img/search-mobile.svg" alt="поиск" class="page-header-mobile__search-img">
       <form action="#" method="get" name="search-form" id="search-form-mobile">
-        <input type="search" name="search" id="search-value-mobile" />
+        <label class="page-header-mobile__search-label" for="search-input-mobile">
+          <img src="./img/search-mobile.svg" alt="поиск" class="page-header-mobile__search-img">
+        </label>
+        <div class="page-header-mobile__search-wrapper">
+          <input type="search" name="search" id="search-input-mobile" />
+          <button type="submit" class="link">Найти</button>
+        </div>
       </form>
     </div>
     <div class="page-header-mobile__phone">
