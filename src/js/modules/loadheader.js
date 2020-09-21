@@ -235,7 +235,8 @@ const desktopHeader = `<header class="page-header">
   </div>
   </header>`;
 
-const mobileHeader = `<header class="page-header-mobile">
+const mobileHeader = `
+<header class="page-header-mobile">
   <div class="container-mobile">
     <div class="page-header-mobile__wrapper">
       <div class="page-header-mobile__burger">
@@ -267,25 +268,27 @@ const mobileHeader = `<header class="page-header-mobile">
     </div>
     </div>
   </div>
-</header>`;
+</header>
+`;
 
 function loadheader() {
   if (window.innerWidth <= 900) {
-    document.querySelector('#main-wrapper').insertAdjacentHTML("afterbegin", mobileHeader);
+    document.querySelector('.main-wrapper').insertAdjacentHTML("afterbegin", mobileHeader);
     const burger = document.querySelector(".page-header-mobile__burger");
-  
+    const search = document.querySelector(".page-header-mobile__search");
+    // const searchForm = search.querySelector("#search-form-mobile");
     let slideout = new Slideout({
-      panel: document.getElementById("main-wrapper"),
-      menu: document.getElementById("menu"),
+      panel: document.querySelector(".main-wrapper"),
+      menu: document.querySelector(".menu-mobile"),
       padding: 256,
       tolerance: 70,
     });
     burger.addEventListener("click",  () => slideout.toggle());
-    // burger.addEventListener = () => {
-    //   burger.classList.toggle("page-header-mobile__burger--opened");
-    // };
+    search.addEventListener("click", () =>
+      search.classList.toggle("page-header-mobile__search--opened")
+    );
   } else {
-    document.querySelector("#main-wrapper").insertAdjacentHTML("afterbegin", desktopHeader);
+    document.querySelector(".main-wrapper").insertAdjacentHTML("afterbegin", desktopHeader);
     makeHeaderHide();
   }
 }

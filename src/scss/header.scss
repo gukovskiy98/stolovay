@@ -472,6 +472,7 @@
   background-color: #f1f1f1;
   width: 100vw;
   height: 53px;
+  // position: fixed;
   &__wrapper {
     background-color: #f1f1f1;
     width: 100%;
@@ -544,6 +545,11 @@
     }
     #search-form-mobile {
       display: none;
+    }
+    &--opened {
+      #search-form-mobile {
+        display: block;
+      }
     }
   }
   &__phone {

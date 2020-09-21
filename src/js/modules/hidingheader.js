@@ -2,7 +2,7 @@ function makeHeaderHide() {
   const headerBottom = document.querySelector(".page-header__bottom");
   const fromTop = +getComputedStyle(headerBottom).top.slice(0, -2);
   const height = +getComputedStyle(headerBottom).height.slice(0, -2);
-  const spaceToLeave = 32;
+  const spaceToLeave = 31;
 
   function scrollHandler() {
     let delta =

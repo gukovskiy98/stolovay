@@ -1,13 +1,11 @@
-const Glide = require("@glidejs/glide");
-const header = require("./modules/loadheader")();
-// из npm
-const ClipboardJS = require("clipboard");
-new ClipboardJS(".page-menu__mail-copybox");
-
-// мои модули
 const testWebP = require("./modules/webptest");
-testWebP();
+const loadheader = require("./modules/loadheader");
+const ClipboardJS = require("clipboard");
+const Glide = require("@glidejs/glide");
 
+testWebP();
+loadheader();
+new ClipboardJS(".page-menu__mail-copybox");
 if (window.innerWidth > 900) {
   new Glide(".categories", {
     type: "slider",
