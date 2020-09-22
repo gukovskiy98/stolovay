@@ -238,40 +238,66 @@ const desktopHeader = `<header class="page-header">
 const mobileHeader = `
 <header class="page-header-mobile">
   <div class="container-mobile">
-    <div class="page-header-mobile__wrapper">
+    <div class="page-header-mobile__top">
       <div class="page-header-mobile__burger">
         <div class="page-header-mobile__burger-line"></div>
-    </div>
-    <a class="page-header-mobile__logo" href="#">
-      <img class="page-header-mobile__logo-image" src="./img/logo-mobile.png" alt="logo" />
-      <div class="page-header-mobile__logo-text">
-        <span class="page-header-mobile__logo-text1">Столовая.РУ</span>
-        <span class="page-header-mobile__logo-text2">Создание пищеблоков</span>
       </div>
-    </a>
-    <div class="page-header-mobile__search">
-      <form action="#" method="get" name="search-form" id="search-form-mobile">
-        <label class="page-header-mobile__search-label" for="search-input-mobile">
-          <img src="./img/search-mobile.svg" alt="поиск" class="page-header-mobile__search-img">
-        </label>
-        <div class="page-header-mobile__search-wrapper">
-          <input type="hidden" name="category" value="Все" />
-          <input type="search" name="search" id="search-input-mobile" placeholder="Поиск" />
-          <button type="submit" class="link">Найти</button>
+      <a class="page-header-mobile__logo" href="#">
+        <img class="page-header-mobile__logo-image" src="./img/logo-mobile.png" alt="logo" />
+        <div class="page-header-mobile__logo-text">
+          <span class="page-header-mobile__logo-text1">Столовая.РУ</span>
+          <span class="page-header-mobile__logo-text2">Создание пищеблоков</span>
         </div>
-      </form>
-    </div>
-    <div class="page-header-mobile__phone">
-      <a class="link" href="tel:+74957907205">
-        <img class="page-header-mobile__phone-img" src="./img/phone-mobile.png" alt="Телефон">
       </a>
+      <div class="page-header-mobile__search">
+        <form action="#" method="get" name="search-form" id="search-form-mobile">
+          <label class="page-header-mobile__search-label" for="search-input-mobile">
+            <img src="./img/search-mobile.svg" alt="поиск" class="page-header-mobile__search-img">
+          </label>
+          <div class="page-header-mobile__search-wrapper">
+            <input type="hidden" name="category" value="Все" />
+            <input type="search" name="search" id="search-input-mobile" placeholder="Поиск" />
+            <button type="submit" class="link">Найти</button>
+          </div>
+        </form>
+      </div>
+      <div class="page-header-mobile__phone">
+        <a class="link" href="tel:+74957907205">
+          <img class="page-header-mobile__phone-img" src="./img/phone-mobile.png" alt="Телефон">
+        </a>
+      </div>
+      <div class="page-header-mobile__cart">
+        <a class="link" href="#">
+          <img class="page-header-mobile__cart-img" src="./img/cart-mobile.png" alt="Корзина">
+          <span class="page-header-mobile__cart-amount">12</span>
+        </a>
+      </div>
     </div>
-    <div class="page-header-mobile__cart">
-      <a class="link" href="#">
-        <img class="page-header-mobile__cart-img" src="./img/cart-mobile.png" alt="Корзина">
-        <span class="page-header-mobile__cart-amount">12</span>
-      </a>
-    </div>
+    <div class="page-header-mobile__bottom">
+      <a href="#" class="page-header-mobile__modal-opener link">Оборудование</a>
+      <div class="page-header-mobile__modal">
+        <div class="page-header-mobile__modal-header">
+          <span class="page-header-mobile__modal-title">
+            Оборудование
+          </span>
+          <a href="#" class="page-header-mobile__modal-closer">
+            x
+          </a>
+        </div>
+        <ul class="page-header-mobile__modal-list">
+          <li class="page-header-mobile__modal-el"><a href="#" class="link page-header-mobile__modal-el-link">Тепловое</a></li>
+          <li class="page-header-mobile__modal-el"><a href="#" class="link page-header-mobile__modal-el-link">Холодильное</a></li>
+          <li class="page-header-mobile__modal-el"><a href="#" class="link page-header-mobile__modal-el-link">Электромеханическое</a></li>
+          <li class="page-header-mobile__modal-el"><a href="#" class="link page-header-mobile__modal-el-link">Посудомоечное</a></li>
+          <li class="page-header-mobile__modal-el"><a href="#" class="link page-header-mobile__modal-el-link">Хлебопекарное</a></li>
+          <li class="page-header-mobile__modal-el"><a href="#" class="link page-header-mobile__modal-el-link">Линии раздачи</a></li>
+          <li class="page-header-mobile__modal-el"><a href="#" class="link page-header-mobile__modal-el-link">Нейтральное</a></li>
+          <li class="page-header-mobile__modal-el"><a href="#" class="link page-header-mobile__modal-el-link">Для фаст фуда</a></li>
+          <li class="page-header-mobile__modal-el"><a href="#" class="link page-header-mobile__modal-el-link">Для залов</a></li>
+          <li class="page-header-mobile__modal-el"><a href="#" class="link page-header-mobile__modal-el-link">Вспомогательное</a></li>
+          <li class="page-header-mobile__modal-el"><a href="#" class="link page-header-mobile__modal-el-link">Для магазинов</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>
@@ -288,6 +314,14 @@ function loadheader() {
     const searchWrapper = document.querySelector(
       ".page-header-mobile__search-wrapper"
     );
+    const modalWrapper = document.querySelector(".page-header-mobile__bottom");
+    const opener = modalWrapper.querySelector(
+      ".page-header-mobile__modal-opener"
+    );
+    const modal = modalWrapper.querySelector(".page-header-mobile__modal");
+    const closer = modalWrapper.querySelector(
+      ".page-header-mobile__modal-closer"
+    );
     let slideout = new Slideout({
       panel: document.querySelector(".main-wrapper"),
       menu: document.querySelector(".menu-mobile"),
@@ -298,6 +332,22 @@ function loadheader() {
     searchLabel.addEventListener("click", () =>
       searchWrapper.classList.toggle("search-opened")
     );
+    document.addEventListener("mousedown", evt => {
+      if (
+        (!evt.target.closest(".page-header-mobile__search")) &&
+        searchWrapper.classList.contains("search-opened")
+      ) {
+        searchWrapper.classList.remove("search-opened");
+      };
+    });
+    opener.addEventListener("click", () => {
+      modal.classList.add('modal-opened');
+      document.body.classList.add('blocked');
+    });
+    closer.addEventListener("click", () => {
+      modal.classList.remove("modal-opened");
+      document.body.classList.remove('blocked');
+    });
   } else {
     document.querySelector(".main-wrapper").insertAdjacentHTML("afterbegin", desktopHeader);
     makeHeaderHide();

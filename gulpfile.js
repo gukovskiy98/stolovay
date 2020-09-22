@@ -56,7 +56,6 @@ function browsersync() {
     },
     port: 9876,
     notify: false,
-    online: false,
   });
 }
 
