@@ -10,7 +10,7 @@
   
 }
 a:focus, input:focus, select:focus, textarea:focus, button:focus {
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
     outline: none !important;
   }
   outline: 2px solid rgba(130,130,130,0.7) !important;
@@ -33,7 +33,7 @@ html {
 body {
   background-color: #f3f2f2;
   color: #121212;
-  min-height: 200vh;
+  // min-height: 200vh;
   &.blocked {
     overflow: hidden;
   }
@@ -117,7 +117,7 @@ body {
   width: calc(50vw + 580px);
   max-width: 1545px;
   @media screen and (max-width: 1200px) {
-    max-width: 95vw;
+    width: 95vw;
   }
   height: 100%;
   &--header-top {
@@ -129,6 +129,29 @@ body {
     align-content: center;
     align-items: center;
     justify-content: space-between;
+  }
+  &--top-block {
+    display: grid;
+    grid-template-areas:  "nav slide sale"
+                          "part part part";
+    grid-template-rows: 1fr 100px;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: stretch;
+    justify-items: center;
+    grid-gap: 20px;
+    @media screen and (max-width: 1200px){
+      grid-template-areas:  "nav sale"
+                            "slide slide"
+                            "part part";
+      grid-template-rows: 1fr 1fr 100px;
+      grid-template-columns: 2fr 1fr;
+    }
+    @media screen and (max-width: 600px){
+      grid-template-areas:  "slide"
+                            "sale"
+                            "part";
+      grid-template-rows: 74vw 69vw 1fr;
+    }
   }
 }
 
@@ -150,4 +173,4 @@ body {
 }
 
 @import "./header.scss";
-
+@import "./topblock.scss";

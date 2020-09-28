@@ -5268,6 +5268,15 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
         }
       }).mount();
     }
+
+    new Glide(".portfolio__wrapper", {
+      type: "slider",
+      perView: 1,
+      gap: 0,
+      autoplay: 2000,
+      animationDuration: 500,
+      touchRatio: 1
+    }).mount();
   }, {
     "./modules/loadheader": 8,
     "./modules/webptest": 9,

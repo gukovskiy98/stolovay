@@ -23,3 +23,11 @@ if (window.innerWidth > 900) {
     },
   }).mount();
 }
+new Glide(".portfolio__wrapper", {
+  type: "slider",
+  perView: 1,
+  gap: 0,
+  autoplay: 2000,
+  animationDuration: 500,
+  touchRatio: 1,
+}).mount();
