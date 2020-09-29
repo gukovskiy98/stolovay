@@ -1,0 +1,31 @@
+.news {
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-areas:  "big small1"
+                          "big small2"
+                          "big small3";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
+    min-height: 500px;
+    grid-gap: 20px;
+  }
+  &__el {
+    &--big {
+      grid-area: big;
+    }
+    &--small1 {
+      grid-area: small1;
+    }
+    &--small2 {
+      grid-area: small2;
+    }
+    &--small3 {
+      grid-area: small3;
+    }
+  }
+}

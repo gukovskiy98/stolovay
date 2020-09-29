@@ -1,8 +1,10 @@
 .top-block {
   padding-top: 232px;
+  margin-bottom: 174px;
   background-color: #f5f2f2;
   @media screen and (max-width: 900px) {
     padding-top: 0;
+    margin-bottom: 75px;
   }
   .navigation {
     grid-area: nav;
@@ -78,7 +80,6 @@
       height: 100%;
     }
     &__el {
-      // background-color: #232323;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -87,20 +88,17 @@
       flex-wrap: wrap;
       height: 100%;
       padding: 20px 0 20px 22px;
-      // @media screen and (max-width: 900px) {
-      //   background-color: #282828;
-      // }
       &--mephi {
-        background: #232323 url(../img/mephi.png) no-repeat center right / 45%;
+        background: #232323 url(../img/mephi.png) no-repeat bottom right -14% / 55%;
       }
       &--furnishing {
         background: #232323 url(../img/furnishing.png) no-repeat center right 10% / 35%;
       }
       &--hospital {
-        background: #232323 url(../img/hospital.png) no-repeat center right / 45%;
+        background: #232323 url(../img/hospital.png) no-repeat bottom right -14% / 55%;
       }
       &--restaurant {
-        background: #232323 url(../img/restaurant.png) no-repeat center right -10% / 45%;
+        background: #232323 url(../img/restaurant.png) no-repeat center right -50% / 65%;
       }
     }
     &__el-sign {
@@ -132,6 +130,7 @@
       bottom: 12px;
       left: 50%;
       transform: translateX(-50%);
+      z-index: 10;
       .glide__bullet--active {
         background-color: #fff;
       }

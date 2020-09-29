@@ -31,9 +31,8 @@ html {
 }
 
 body {
-  background-color: #f3f2f2;
+  background-color: #f5f2f2;
   color: #121212;
-  // min-height: 200vh;
   &.blocked {
     overflow: hidden;
   }
@@ -72,7 +71,7 @@ body {
 .main-wrapper {
   min-width: 100%;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: #f5f2f2;
 }
 
 .slideout-menu {
@@ -153,6 +152,9 @@ body {
       grid-template-rows: 74vw 69vw 1fr;
     }
   }
+  &--news {
+    
+  }
 }
 
 .container-mobile {
@@ -174,3 +176,4 @@ body {
 
 @import "./header.scss";
 @import "./topblock.scss";
+@import "./news.scss";

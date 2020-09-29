@@ -437,8 +437,10 @@
       background-color: transparent;
       z-index: 1;
       &--left {
-        border-top-color: #222;
-        border-left-color: #222;
+        @media screen and (max-width: 1500px) {
+          border-top-color: #222;
+          border-left-color: #222;
+        }
         transform: rotate(-45deg);
         left: -5px;
         &:hover {
@@ -450,8 +452,10 @@
         }
       }
       &--right {
-        border-top-color: #222;
-        border-right-color: #222;
+        @media screen and (max-width: 1500px) {
+          border-top-color: #222;
+          border-right-color: #222;
+        }
         transform: rotate(45deg);
         right: -5px;
         &:hover {
