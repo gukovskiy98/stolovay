@@ -42,7 +42,7 @@
     height: 28px;
     display: flex;
     padding: 0 10px 0 5px;
-    height: 100%;
+    margin: auto;
     align-content: center;
     align-items: center;
     &:last-of-type {
@@ -55,10 +55,10 @@
       flex: 1 0 auto;
     }
   }
-  a {
+  &__link {
     position: relative;
     color: #fff;
-    // margin: auto;
+    margin: auto;
   }
   &__mail {
     flex: 0 0 auto;
@@ -409,6 +409,7 @@
     margin: 0 20px;
     height: 100%;
     position: relative;
+    font-family: "Myriad SemiExtended", sans-serif;
     .glide__track {
       position: relative;
       top: 50%;

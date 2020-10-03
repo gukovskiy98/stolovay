@@ -92,13 +92,13 @@
         background: #232323 url(../img/mephi.png) no-repeat bottom right -14% / 55%;
       }
       &--furnishing {
-        background: #232323 url(../img/furnishing.png) no-repeat center right 10% / 35%;
+        background: #232323 url(../img/furnishing.png) no-repeat center right 10% / contain;
       }
       &--hospital {
         background: #232323 url(../img/hospital.png) no-repeat bottom right -14% / 55%;
       }
       &--restaurant {
-        background: #232323 url(../img/restaurant.png) no-repeat center right -50% / 65%;
+        background: #232323 url(../img/restaurant.png) no-repeat center right -50% / contain;
       }
     }
     &__el-sign {
@@ -130,7 +130,7 @@
       bottom: 12px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 10;
+      z-index: 5;
       .glide__bullet--active {
         background-color: #fff;
       }
@@ -159,7 +159,6 @@
       @media screen and (max-width: 900px) {
         z-index: 1;
       }
-      font-family: "Myriad SemiExtended", sans-serif;
       &--left {
         left: 25px;
       }

@@ -7,35 +7,35 @@ const desktopHeader = `<header class="page-header">
       <div class="page-menu">
         <ul class="page-menu__list">
           <li class="page-menu__el">
-            <a class="link" href="#">Компания</a>
+            <a class="link page-menu__link" href="#">Компания</a>
           </li>
           <li class="page-menu__el">
-            <a class="link" href="#">Портфолио</a>
+            <a class="link page-menu__link" href="#">Портфолио</a>
           </li>
           <li class="page-menu__el page-menu__el--separated">
-            <a class="link" href="#">Проектирование</a>
+            <a class="link page-menu__link" href="#">Проектирование</a>
           </li>
           <li class="page-menu__el">
-            <a class="link" href="#">Ресторанам</a>
+            <a class="link page-menu__link" href="#">Ресторанам</a>
           </li>
           <li class="page-menu__el">
-            <a class="link" href="#">Застройщикам</a>
+            <a class="link page-menu__link" href="#">Застройщикам</a>
           </li>
           <li class="page-menu__el">
-            <a class="link" href="#">Гос.заказчикам</a>
+            <a class="link page-menu__link" href="#">Гос.заказчикам</a>
           </li>
           <li class="page-menu__el page-menu__el--separated">
-            <a class="link" href="#">Таблет-питание</a>
+            <a class="link page-menu__link" href="#">Таблет-питание</a>
           </li>
           <li class="page-menu__el">
-            <a class="link" href="#">Сервис</a>
+            <a class="link page-menu__link" href="#">Сервис</a>
           </li>
           <li class="page-menu__el">
-            <a class="link" href="#">Контакты</a>
+            <a class="link page-menu__link" href="#">Контакты</a>
           </li>
         </ul>
         <div class="page-menu__mail">
-          <a class="link" href="mailto:info@stolovay.ru">
+          <a class="link page-menu__link" href="mailto:info@stolovay.ru">
             <span>info@stolovay.ru</span>
           </a>
           <div class="page-menu__mail-copybox" data-clipboard-text="info@stolovay.ru">
@@ -43,7 +43,7 @@ const desktopHeader = `<header class="page-header">
           </div>
         </div>
         <div class="page-menu__phone phone">
-          <a class="link" href="tel:+74957907205">
+          <a class="link page-menu__link" href="tel:+74957907205">
             <span>8 495 790-72-05</span>
           </a>
           <div class="phone__wrapper">
