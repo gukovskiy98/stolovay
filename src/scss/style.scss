@@ -133,7 +133,7 @@ body {
     display: grid;
     grid-template-areas:  "nav slide sale"
                           "part part part";
-    grid-template-rows: 1fr 100px;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: stretch;
     justify-items: center;
@@ -142,7 +142,7 @@ body {
       grid-template-areas:  "nav sale"
                             "slide slide"
                             "part part";
-      grid-template-rows: 1fr 1fr 100px;
+      grid-template-rows: 1fr 1fr auto;
       grid-template-columns: 2fr 1fr;
     }
     @media screen and (max-width: 600px){
