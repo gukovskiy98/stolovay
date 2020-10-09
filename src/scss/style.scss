@@ -155,6 +155,9 @@ body {
   &--news {
     padding: 0 5%;
   }
+  &--recommend {
+    
+  }
 }
 
 .container-mobile {
@@ -177,3 +180,4 @@ body {
 @import "./header.scss";
 @import "./topblock.scss";
 @import "./news.scss";
+@import "./recommend.scss";
