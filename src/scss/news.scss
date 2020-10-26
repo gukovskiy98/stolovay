@@ -1,4 +1,5 @@
 .news {
+  margin-bottom: 100px;
   @media screen and (max-width: 600px) {
     display: none;
   }
@@ -9,17 +10,17 @@
   }
   &__wrapper {
     display: grid;
-    grid-template-areas:  "big small1"
-                          "big small2"
-                          "big small3";
+    grid-template-areas:  "big small"
+                          "big small"
+                          "big small";
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 2fr 3fr;
     margin-bottom: 50px;
     @media screen and (max-width: 1200px) {
       grid-template-areas:  "big"
-                            "small1"
-                            "small2"
-                            "small3";
+                            "small"
+                            "small"
+                            "small";
       grid-template-rows: repeat(4, auto);
       grid-template-columns: 1fr;
     }

@@ -215,6 +215,7 @@
   .partners {
     grid-area: part;
     width: 100%;
+    overflow: hidden;
     &__list {
       display: flex;
       list-style: none;
@@ -223,6 +224,25 @@
     &__el {
       flex: 1 0 150px;
       background-color: #fff;
+      position: relative;
+      &::before {
+        background-color: #e8e7e7;
+        top: 15%;
+        left: -0.5px;
+        content: '';
+        height: 70%;
+        width: 0.5px;
+        position: absolute;
+      }
+      &::after {
+        background-color: #e8e7e7;
+        right: -0.5px;
+        content: '';
+        height: 70%;
+        width: 0.5px;
+        position: absolute;
+        top: 15%;
+      }
     }
     &__link {
       display: flex;

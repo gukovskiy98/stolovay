@@ -103,7 +103,10 @@ const desktopHeader = `<header class="page-header">
   <div class="page-header__middle">
     <div class="container container--header-middle">
       <a class="logo" href="#">
-        <img class="logo__image" src="./img/logo.png" alt="logo" />
+        <picture
+          ><source srcset="./img/logo.webp" type="image/webp" />
+          <img class="logo__image" src="./img/logo.png" alt="logo"
+        /></picture>
         <span class="logo__text">Столовая.РУ</span>
       </a>
       <form action="#" method="get" name="search-form" id="search-form">
@@ -150,77 +153,154 @@ const desktopHeader = `<header class="page-header">
           <ul class="glide__slides categories__list">
             <li class="glide__slide categories__elem">
               <a href="#teplovoe" class="categories__link">
-                <img class="categories__img" src="./img/teplovoe.png" alt="Тепловое оборудование(фото)">
+                <picture>
+                  <source srcset="./img/teplovoe.webp" type="image/webp" />
+                  <img
+                    class="categories__img"
+                    src="./img/teplovoe.png"
+                    alt="Тепловое оборудование(фото)"
+                  />
+                </picture>
                 <span class="categories__text">Тепловое</span>
               </a>
             </li>
 
             <li class="glide__slide categories__elem">
               <a href="#holodilnoe" class="categories__link">
-                <img class="categories__img" src="./img/holodilnoe.png" alt="Холодильное оборудование(фото)">
+                <picture>
+                  <source srcset="./img/holodilnoe.webp" type="image/webp" />
+                  <img
+                    class="categories__img"
+                    src="./img/holodilnoe.png"
+                    alt="Холодильное оборудование(фото)"
+                  />
+                </picture>
                 <span class="categories__text">Холодильное</span>
               </a>
             </li>
 
             <li class="glide__slide categories__elem">
               <a href="#elektromeh" class="categories__link">
-                <img class="categories__img" src="./img/elektromeh.png" alt="Электромеханическое оборудование(фото)">
+                <picture>
+                  <source srcset="./img/elektromeh.webp" type="image/webp" />
+                  <img
+                    class="categories__img"
+                    src="./img/elektromeh.png"
+                    alt="Электромеханическое оборудование(фото)"
+                  />
+                </picture>
                 <span class="categories__text">Электромеханическое</span>
               </a>
             </li>
 
             <li class="glide__slide categories__elem">
               <a href="#posudomoechnoe" class="categories__link">
-                <img class="categories__img" src="./img/posudomoechnoe.png" alt="Посудомоечное оборудование(фото)">
+                <picture>
+                  <source srcset="./img/posudomoechnoe.webp" type="image/webp" />
+                  <img
+                    class="categories__img"
+                    src="./img/posudomoechnoe.png"
+                    alt="Посудомоечное оборудование(фото)"
+                  />
+                </picture>
                 <span class="categories__text">Посудомоечное</span>
               </a>
             </li>
 
             <li class="glide__slide categories__elem">
               <a href="#hlebopekarnoe" class="categories__link">
-                <img class="categories__img" src="./img/hlebopekarnoe.png" alt="Хлебопекарное оборудование(фото)">
+                <picture>
+                  <source srcset="./img/hlebopekarnoe.webp" type="image/webp" />
+                  <img
+                    class="categories__img"
+                    src="./img/hlebopekarnoe.png"
+                    alt="Хлебопекарное оборудование(фото)"
+                  />
+                </picture>
                 <span class="categories__text">Хлебопекарное</span>
               </a>
             </li>
             
             <li class="glide__slide categories__elem">
               <a href="#liniirazdachi" class="categories__link">
-                <img class="categories__img" src="./img/liniirazdachi.png" alt="Линии раздачи(фото)">
+                <picture>
+                  <source srcset="./img/liniirazdachi.webp" type="image/webp" />
+                  <img
+                    class="categories__img"
+                    src="./img/liniirazdachi.png"
+                    alt="Линии раздачи(фото)"
+                  />
+                </picture>
                 <span class="categories__text">Линии раздачи</span>
               </a>
             </li>
 
             <li class="glide__slide categories__elem">
               <a href="#neytralnoe" class="categories__link">
-                <img class="categories__img" src="./img/neytralnoe.png" alt="Нейтральное(фото)">
+                <picture>
+                  <source srcset="./img/neytralnoe.webp" type="image/webp" />
+                  <img
+                    class="categories__img"
+                    src="./img/neytralnoe.png"
+                    alt="Нейтральное(фото)"
+                  />
+                </picture>
                 <span class="categories__text">Нейтральное</span>
               </a>
             </li>
 
             <li class="glide__slide categories__elem">
               <a href="#fastfood" class="categories__link">
-                <img class="categories__img" src="./img/fastfood.png" alt="Для фаст фуда(фото)">
+                <picture>
+                  <source srcset="./img/fastfood.webp" type="image/webp" />
+                  <img
+                    class="categories__img"
+                    src="./img/fastfood.png"
+                    alt="Для фаст фуда(фото)"
+                  />
+                </picture>
                 <span class="categories__text">Для фаст фуда</span>
               </a>
             </li>
 
             <li class="glide__slide categories__elem">
               <a href="#dlyazalov" class="categories__link">
-                <img class="categories__img" src="./img/dlyazalov.png" alt="Для залов(фото)">
+                <picture>
+                  <source srcset="./img/dlyazalov.webp" type="image/webp" />
+                  <img
+                    class="categories__img"
+                    src="./img/dlyazalov.png"
+                    alt="Для залов(фото)"
+                  />
+                </picture>
                 <span class="categories__text">Для залов</span>
               </a>
             </li>
 
             <li class="glide__slide categories__elem">
               <a href="#vspomogatelnoe" class="categories__link">
-                <img class="categories__img" src="./img/vspomogatelnoe.png" alt="Вспомогательное(фото)">
+                <picture>
+                  <source srcset="./img/vspomogatelnoe.webp" type="image/webp" />
+                  <img
+                    class="categories__img"
+                    src="./img/vspomogatelnoe.png"
+                    alt="Вспомогательное(фото)"
+                  />
+                </picture>
                 <span class="categories__text">Вспомогательное</span>
               </a>
             </li>
 
             <li class="glide__slide categories__elem">
               <a href="#dlyamagazinov" class="categories__link">
-                <img class="categories__img" src="./img/dlyamagazinov.png" alt="Для магазинов(фото)">
+                <picture>
+                  <source srcset="./img/dlyamagazinov.webp" type="image/webp" />
+                  <img
+                    class="categories__img"
+                    src="./img/dlyamagazinov.png"
+                    alt="Для магазинов(фото)"
+                  />
+                </picture>
                 <span class="categories__text">Для магазинов</span>
               </a>
             </li>
@@ -243,7 +323,14 @@ const mobileHeader = `
         <div class="page-header-mobile__burger-line"></div>
       </div>
       <a class="page-header-mobile__logo" href="#">
-        <img class="page-header-mobile__logo-image" src="./img/logo-mobile.png" alt="logo" />
+        <picture>
+          <source srcset="./img/logo-mobile.webp" type="image/webp" />
+          <img
+            class="page-header-mobile__logo-image"
+            src="./img/logo-mobile.png"
+            alt="logo"
+          />
+        </picture>
         <div class="page-header-mobile__logo-text">
           <span class="page-header-mobile__logo-text1">Столовая.РУ</span>
           <span class="page-header-mobile__logo-text2">Создание пищеблоков</span>
@@ -263,12 +350,26 @@ const mobileHeader = `
       </div>
       <div class="page-header-mobile__phone">
         <a class="link" href="tel:+74957907205">
-          <img class="page-header-mobile__phone-img" src="./img/phone-mobile.png" alt="Телефон">
+          <picture>
+            <source srcset="./img/phone-mobile.webp" type="image/webp" />
+            <img
+              class="page-header-mobile__phone-img"
+              src="./img/phone-mobile.png"
+              alt="Телефон"
+            />
+          </picture>
         </a>
       </div>
       <div class="page-header-mobile__cart">
         <a class="link" href="#">
-          <img class="page-header-mobile__cart-img" src="./img/cart-mobile.png" alt="Корзина">
+          <picture>
+            <source srcset="./img/cart-mobile.webp" type="image/webp" />
+            <img
+              class="page-header-mobile__cart-img"
+              src="./img/cart-mobile.png"
+              alt="Корзина"
+            />
+          </picture>
           <span class="page-header-mobile__cart-amount">12</span>
         </a>
       </div>

@@ -3,7 +3,7 @@ function makeHeaderHide() {
   const fromTop = +getComputedStyle(headerBottom).top.slice(0, -2);
   const height = +getComputedStyle(headerBottom).height.slice(0, -2);
   const spaceToLeave = 30;
-
+  
   function scrollHandler() {
     let delta =
       window.pageYOffset > height - spaceToLeave
@@ -11,7 +11,7 @@ function makeHeaderHide() {
         : window.pageYOffset;
     headerBottom.style.top = fromTop - delta + "px";
   }
-  document.addEventListener("scroll", scrollHandler);
+  document.addEventListener("scroll", scrollHandler, { passive: true });
 }
 
 module.exports = makeHeaderHide;

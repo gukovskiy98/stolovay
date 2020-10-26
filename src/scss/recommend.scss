@@ -1,3 +1,98 @@
 .recommend {
-  
+  @media screen and (max-width: 900px) {
+    font-size: 0.75rem;
+  }
+  &__title {
+    text-align: center;
+    color: #232323;
+    font-family: "Myriad SemiExtended", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  &__title-description {
+    font-family: "Myriad SemiExtended", sans-serif;
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
+    margin-bottom: 65px;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-areas:  "big small1"
+                          "big small2";
+    grid-template-rows: 3fr 2fr;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 10px;
+    @media screen and (max-width: 900px) {
+      grid-template-areas:  "big"
+                            "small1"
+                            "small2";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    }
+  }
+  &__el {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    &:hover {
+      transform: scale(0.99);
+      filter: brightness(0.3);
+    }
+  }
+  &__el--big {
+    grid-area: big;
+    text-align: center;
+    flex-direction: column;
+    .recommend__el-wrapper {
+      margin-top: 69px;
+    }
+    @media screen and (max-width: 900px) {
+      flex-direction: row;
+    }
+  }
+  &__el--dark {
+    background-color: #232323;
+    color: #fff;
+  }
+  &__el-wrapper {
+    max-width: 60%;
+    margin-left: 5%;
+    &--after {
+      order: 1;
+      margin: 0;
+      margin-right: 10%;
+      @media screen and (max-width: 1200px) {
+        margin-right: 5%;
+      }
+    }
+  }
+  &__el-brand {
+    font-family: "Myriad SemiExtended", sans-serif;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    @media screen and (max-width: 900px) {
+      font-size: 1rem;
+    }
+  }
+  &__el-title {
+    font-size: 1.875rem;
+    font-weight: 400;
+    margin-bottom: 26px;
+    @media screen and (max-width: 900px) {
+      font-size: 1.25rem;
+    }
+  }
+  &__el-description {
+    font-family: "Myriad SemiExtended", sans-serif;
+    color: #777;
+  }
+  &__img {
+    max-width: 90%;
+    max-height: 95%;
+  }
 }
