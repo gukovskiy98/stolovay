@@ -303,6 +303,7 @@
       top: 50%;
       transform: translateY(-25%);
       right: 8px;
+      pointer-events: none;
     }
   }
   #search-category {
@@ -410,6 +411,7 @@
     height: 100%;
     position: relative;
     font-family: "Myriad SemiExtended", sans-serif;
+    font-size: 0.9rem;
     .glide__track {
       position: relative;
       top: 50%;
@@ -469,7 +471,7 @@
       }
     }
     @media screen and (max-width: 1800px) {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
     }
   }
 }
@@ -485,7 +487,6 @@
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    // position: relative;
   }
   &__burger {
     border-radius: 50%;
@@ -618,6 +619,7 @@
     left: 0;
     right: 0;
     top: 0;
+    // bottom: 0;
     min-height: 100vh;
     background-color: #fff;
     z-index: -1;

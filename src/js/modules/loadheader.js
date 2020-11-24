@@ -87,11 +87,11 @@ const desktopHeader = `<header class="page-header">
               </span>
               <form action="#" method="post" class="phone__form">
                 <label  class="phone__label" for="phone-input-name">Имя:</label>
-                <input class="phone__input" type="text" id="phone-input-name" placeholder="Анна">
+                <input class="phone__input" type="text" id="phone-input-name" placeholder="Анна" required>
                 <label  class="phone__label" for="phone-input-tel">
                   Телефон:
                 </label>
-                <input class="phone__input" type="tel" id="phone-input-tel" placeholder="+7(123)456-78-90">
+                <input class="phone__input" type="tel" id="phone-input-tel" placeholder="+7(123)456-78-90" required>
                 <button class="phone__submit" type="submit">Отправить</button>
               </form>
             </div>

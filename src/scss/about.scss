@@ -1,6 +1,50 @@
 .about {
-
+  margin-bottom: 172px;
+  &__left-side {
+    flex: 1 1 auto;
+    margin-right: 19%;
+  }
   &__title {
-    display: none;
+    font-family: "Myriad SemiExtended", sans-serif;
+    font-size: 2.5rem;
+    color: #121212;
+    margin-bottom: 20px;
+  }
+  &__right-side {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    margin-right: 47px;
+  }
+  &__right-title {
+    font-size: 2.5rem;
+    color: #121212;
+  }
+  &__right-secondary-title {
+    font-family: "Myriad SemiExtended", sans-serif;
+    color: #777;
+    margin-bottom: 30px;
+  }
+  &__right-company-group {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  &__right-indicators {
+    font-weight: 1.125rem;
+    font-family: "Myriad SemiExtended", sans-serif;
+    color: #777;
+    margin-bottom: 25px;
+  }
+  &__right-indicator-1 {
+    font-family: "Myriad SemiExtended", sans-serif;
+    font-weight: 1.125rem;
+  }
+  &__right-indicator-2 {
+    font-family: "Myriad SemiExtended", sans-serif;
+    font-weight: 1.125rem;
+  }
+  &__right-indicator-3 {
+    font-family: "Myriad SemiExtended", sans-serif;
+    font-weight: 1.125rem;
   }
 }
