@@ -1,5 +1,8 @@
 .recommend {
   margin-bottom: 170px;
+  @media screen and (max-width: 900px) {
+    margin-bottom: 73px;
+  }
   @media screen and (max-width: 600px) {
     font-size: 0.75rem;
   }
@@ -57,11 +60,18 @@
       margin-top: 69px;
       @media screen and (max-width: 900px) {
         margin-top: 0;
+        margin-left: 5%;
         text-align: initial;
       }
     }
     .recommend__el-description {
       margin: 0 20px;
+      @media screen and (max-width: 1200px) {
+        margin: 0;
+      }
+      @media screen and (max-width: 900px) {
+        margin: 0 20px 0 0;
+      }
     }
     @media screen and (max-width: 900px) {
       flex-direction: row;
@@ -110,6 +120,9 @@
     font-family: "Myriad SemiExtended", sans-serif;
     color: #777;
     margin-right: 120px;
+    @media screen and (max-width: 1200px) {
+      margin-right: 20px;
+    }
   }
   &__img {
     font-size: 0;
