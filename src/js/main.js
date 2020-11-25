@@ -1,5 +1,6 @@
 const testWebP = require("./modules/webptest");
 const loadheader = require("./modules/loadheader");
+const makeHeaderHide = require('./modules/hidingheader');
 const ClipboardJS = require("clipboard");
 const Glide = require("@glidejs/glide");
 
@@ -7,6 +8,7 @@ testWebP();
 loadheader();
 new ClipboardJS(".page-menu__mail-copybox");
 if (window.innerWidth > 900) {
+  makeHeaderHide();
   new Glide(".categories", {
     type: "slider",
     bound: true,
