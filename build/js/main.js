@@ -5280,6 +5280,24 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
       animationDuration: 500,
       touchRatio: 1
     }).mount();
+
+    document.querySelector('.about__show-more').onclick = function () {
+      var desktopHidden = document.querySelectorAll('.about__hidden-desktop-block');
+      var mobileHidden = document.querySelectorAll('.about__hidden-mobile-block');
+      return function () {
+        this.textContent = this.textContent === '+' ? '-' : '+';
+
+        if (window.innerWidth > 900) {
+          desktopHidden.forEach(function (elem) {
+            return elem.classList.toggle('about__hidden-desktop-block');
+          });
+        } else {
+          mobileHidden.forEach(function (elem) {
+            return elem.classList.toggle('about__hidden-mobile-block');
+          });
+        }
+      };
+    }();
   }, {
     "./modules/hidingheader": 7,
     "./modules/loadheader": 8,

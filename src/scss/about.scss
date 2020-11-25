@@ -13,11 +13,43 @@
     margin-bottom: 20px;
     font-weight: 400;
   }
+  &__list {
+    list-style: none;
+  }
   &__secondary-title {
     font-family: "Myriad SemiExtended", sans-serif;
     font-size: 2.5rem;
     margin: 30px 0 25px;
     font-weight: 300;
+  }
+  &__hidden-desktop-block {
+    @media screen and (min-width: 900.01px) {
+      display: none;
+    }
+  }
+  &__hidden-mobile-block {
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+  &__show-more {
+    margin-top: 22px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-color: #282828;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.2s ease;
+    outline: none;
+    color: #fff;
+    font: inherit;
+    font-size: 1.5rem;
+    line-height: 0;
+    &:hover {
+      background-color: #181818;
+    }
   }
   &__right-side {
     flex: 0 1 auto;

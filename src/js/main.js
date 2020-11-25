@@ -33,3 +33,23 @@ new Glide(".portfolio__wrapper", {
   animationDuration: 500,
   touchRatio: 1,
 }).mount();
+
+document.querySelector('.about__show-more').onclick = (function(){
+  const desktopHidden = document.querySelectorAll('.about__hidden-desktop-block');
+  const mobileHidden = document.querySelectorAll(
+    '.about__hidden-mobile-block'
+  );
+  return function() {
+    this.textContent = this.textContent === '+' ? '-' : '+';
+    if (window.innerWidth > 900) {
+      desktopHidden.forEach(elem =>
+        elem.classList.toggle('about__hidden-desktop-block')
+      );
+    } else {
+      mobileHidden.forEach(elem =>
+        elem.classList.toggle('about__hidden-mobile-block')
+      );
+    }
+  }
+
+})();
