@@ -1,0 +1,69 @@
+.page-footer {
+  color: #fff;
+  &__top {
+    font-family: "Myriad SemiExtended", sans-serif;
+    font-weight: 300;
+    background-color: #232323;
+  }
+  &__bottom {
+    background-color: #191919;
+  }
+  &__outer-list {
+    padding: 90px 0 80px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__outer-title {
+    color: #777;
+    font-size: 1.5rem;
+    font-weight: inherit;
+    margin-bottom: 30px;
+  }
+  &__inner-el {
+    margin-bottom: 7px;
+  }
+  &__inner-el--break {
+    margin-bottom: 20px;
+  }
+  &__inner-list {
+    list-style: none;
+  }
+  &__inner-link {
+    font: inherit;
+    transition: color 0.15s ease;
+    &:hover {
+      color: #777;
+    }
+  }
+  &__bottom {
+    background-color: #191919;
+    padding: 36px 0 20px;
+  }
+  &__bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bottom-logo {
+    display: flex;
+    align-items: center;
+  }
+  &__bottom-logo-image {
+    margin-right: 17px;
+  }
+  &__bottom-logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+  &__bottom-logo-text1 {
+    font-size: 1.5rem;
+  }
+  &__bottom-logo-text2 {
+    font-family: "Myriad SemiExtended", sans-serif;
+    color: #787878;
+  }
+  &__bottom-developer {
+    font-family: "Myriad SemiExtended", sans-serif;
+    font-size: 1.125rem;
+  }
+}

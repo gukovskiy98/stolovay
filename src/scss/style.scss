@@ -166,15 +166,28 @@ img {
   }
   &--news {
     padding: 0 3%;
+    @media screen and (max-width: 900px) {
+      padding: 0;
+    }
   }
   &--recommend {
     padding: 0 3.5%;
+    @media screen and (max-width: 900px) {
+      padding: 0;
+    }
   }
   &--about {
     display: flex;
     padding: 0 3.5%;
     @media screen and (max-width: 900px) {
       flex-direction: column-reverse;
+      padding: 0;
+    }
+  }
+  &--footer {
+    padding: 0 3.5%;
+    @media screen and (max-width: 900px) {
+      padding: 0;
     }
   }
 }
@@ -201,3 +214,4 @@ img {
 @import "./news.scss";
 @import "./recommend.scss";
 @import "./about.scss";
+@import "./footer.scss";

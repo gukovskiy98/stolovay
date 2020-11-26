@@ -87,7 +87,7 @@ function loadheader() {
       document.body.classList.remove('blocked');
     });
   } else {
-    // загружаем десктопный хедер
+  // загружаем десктопный хедер
     document.body.insertAdjacentHTML('afterbegin', desktopHeader);
   }
 }
