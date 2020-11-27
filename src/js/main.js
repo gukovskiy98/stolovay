@@ -60,6 +60,6 @@ if (window.innerWidth <= 900) {
     if (!title) return;
     console.log(title.nextElementSibling.hidden);
     title.nextElementSibling.style.display =
-      title.nextElementSibling.style.display === 'none' ? 'block' : 'none';
+      title.nextElementSibling.style.display === 'block' ? 'none' : 'block';
   });
 }

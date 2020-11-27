@@ -5304,7 +5304,7 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
         var title = evt.target.closest('.page-footer__outer-title');
         if (!title) return;
         console.log(title.nextElementSibling.hidden);
-        title.nextElementSibling.style.display = title.nextElementSibling.style.display === 'none' ? 'block' : 'none';
+        title.nextElementSibling.style.display = title.nextElementSibling.style.display === 'block' ? 'none' : 'block';
       });
     }
   }, {
