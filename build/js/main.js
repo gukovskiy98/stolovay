@@ -5298,6 +5298,15 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
         }
       };
     }();
+
+    if (window.innerWidth <= 900) {
+      document.addEventListener('click', function (evt) {
+        var title = evt.target.closest('.page-footer__outer-title');
+        if (!title) return;
+        console.log(title.nextElementSibling.hidden);
+        title.nextElementSibling.style.display = title.nextElementSibling.style.display === 'none' ? 'block' : 'none';
+      });
+    }
   }, {
     "./modules/hidingheader": 7,
     "./modules/loadheader": 8,

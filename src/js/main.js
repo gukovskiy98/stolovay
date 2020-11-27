@@ -53,3 +53,13 @@ document.querySelector('.about__show-more').onclick = (function(){
   }
 
 })();
+
+if (window.innerWidth <= 900) {
+  document.addEventListener('click', evt => {
+    let title = evt.target.closest('.page-footer__outer-title');
+    if (!title) return;
+    console.log(title.nextElementSibling.hidden);
+    title.nextElementSibling.style.display =
+      title.nextElementSibling.style.display === 'none' ? 'block' : 'none';
+  });
+}
