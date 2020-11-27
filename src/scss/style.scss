@@ -147,8 +147,6 @@ img {
                           "part part part";
     grid-template-rows: 1fr auto;
     grid-template-columns: 1fr 2fr 1fr;
-    align-items: stretch;
-    justify-items: center;
     grid-gap: 20px;
     @media screen and (max-width: 1200px){
       grid-template-areas:  "nav sale"
@@ -162,6 +160,7 @@ img {
                             "sale"
                             "part";
       grid-template-rows: 74vw 69vw 1fr;
+      grid-template-columns: 1fr;
     }
   }
   &--news {

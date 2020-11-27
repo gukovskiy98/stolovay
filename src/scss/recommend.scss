@@ -1,5 +1,5 @@
 .recommend {
-  margin-bottom: 170px;
+  margin-bottom: 222px;
   @media screen and (max-width: 900px) {
     margin-bottom: 73px;
   }
@@ -76,6 +76,12 @@
     @media screen and (max-width: 900px) {
       flex-direction: row;
     }
+  }
+  &__el--small1 {
+    grid-area: small1;
+  }
+  &__el--small2 {
+    grid-area: small2;
   }
   &__el--dark {
     background-color: #232323;
