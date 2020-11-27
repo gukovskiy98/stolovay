@@ -37,13 +37,13 @@
       color: #fff;
       padding: 15px 0;
     }
-    &::after {
-      @media screen and (max-width: 900px) {
-        content: '+';
-        display: inline-block;
-        position: absolute;
-        right: 0;
-      }
+  }
+  &__outer-title-sign {
+    display: none;
+    @media screen and (max-width: 900px) {
+      position: absolute;
+      right: 0;
+      display: inline-block;
     }
   }
   &__inner-list {

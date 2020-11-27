@@ -5305,6 +5305,7 @@ function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "funct
         if (!title) return;
         console.log(title.nextElementSibling.hidden);
         title.nextElementSibling.style.display = title.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+        title.firstElementChild.textContent = title.firstElementChild.textContent === '+' ? '-' : '+';
       });
     }
   }, {

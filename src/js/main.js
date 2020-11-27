@@ -61,5 +61,7 @@ if (window.innerWidth <= 900) {
     console.log(title.nextElementSibling.hidden);
     title.nextElementSibling.style.display =
       title.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+    title.firstElementChild.textContent = 
+      title.firstElementChild.textContent === '+' ? '-' : '+';
   });
 }
