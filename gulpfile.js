@@ -1,23 +1,24 @@
-const gulp = require("gulp"),
-  babel = require("gulp-babel"),
-  prefixer = require("gulp-autoprefixer"),
-  uglify = require("gulp-terser"),
-  sass = require("gulp-sass"),
-  cleanCSS = require("gulp-clean-css"),
-  browserSync = require("browser-sync").create(),
-  webp = require("gulp-webp"),
-  webpHtml = require("gulp-webp-html"),
-  webpCss = require("gulp-webpcss"),
-  ttf2woff = require("gulp-ttf2woff"),
-  ttf2woff2 = require("gulp-ttf2woff2"),
-  fileInclude = require("gulp-file-include"),
-  del = require("del"),
-  plumber = require("gulp-plumber"),
-  tinify = require("gulp-tinify"),
-  rename = require("gulp-rename"),
-  source = require("vinyl-source-stream"),
-  browserify = require("browserify"),
-  streamify = require("gulp-streamify");
+const gulp = require('gulp'),
+  babel = require('gulp-babel'),
+  prefixer = require('gulp-autoprefixer'),
+  uglify = require('gulp-terser'),
+  sass = require('gulp-sass'),
+  cleanCSS = require('gulp-clean-css'),
+  browserSync = require('browser-sync').create(),
+  webp = require('gulp-webp'),
+  webpHtml = require('gulp-webp-html'),
+  webpCss = require('gulp-webpcss'),
+  ttf2woff = require('gulp-ttf2woff'),
+  ttf2woff2 = require('gulp-ttf2woff2'),
+  fileInclude = require('gulp-file-include'),
+  del = require('del'),
+  plumber = require('gulp-plumber'),
+  tinify = require('gulp-tinify'),
+  rename = require('gulp-rename'),
+  source = require('vinyl-source-stream'),
+  browserify = require('browserify'),
+  streamify = require('gulp-streamify'),
+  ghPages = require('gulp-gh-pages');
 
 const path = {
   build: {
@@ -154,6 +155,10 @@ function watchFiles() {
   gulp.watch(path.watch.fonts, fonts);
 }
 
+function deploy() {
+  return gulp.src('./build/**/*').pipe(ghPages());
+}
+
 const start = gulp.parallel(
   gulp.series(clean, gulp.parallel(html, css, js, images, fonts)),
   watchFiles,
@@ -177,3 +182,4 @@ exports.fonts = fonts;
 exports.start = start;
 exports.quickStart = quickStart;
 exports.default = start;
+exports.deploy = deploy;
